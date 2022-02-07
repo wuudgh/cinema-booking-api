@@ -21,6 +21,12 @@ app.use("/customer", customerRouter);
 const moviesRouter = require("./routers/movies");
 app.use("/movies", moviesRouter);
 
+const screenRouter = require("./routers/screen");
+app.use("/screen", screenRouter);
+
+const ticketRouter = require("./routers/ticket");
+app.use("/ticket", ticketRouter);
+
 // Set up a default "catch all" route to use when someone visits a route
 // that we haven't built
 app.get("*", (req, res) => {
